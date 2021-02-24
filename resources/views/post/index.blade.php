@@ -134,7 +134,7 @@
                             </div>
                         </div>
                         <div class="entry-content">
-                            <p>{!!  substr(strip_tags($post->content), 0, 150) !!} ...</p>
+                            <p>{!!  substr(strip_tags($post->content), 0, 300) !!} ...</p>
                         </div>
                     </div>
                 </div>
