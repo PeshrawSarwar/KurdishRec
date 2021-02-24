@@ -17,6 +17,13 @@ class PostController extends Controller
 {
     //
 
+    public function __construct() {
+
+        $this->middleware('auth')->only('edit', 'delete', 'update');
+
+
+    }
+
     public function index(){
         $posts = Post::with('category:id,name')->latest()->paginate(10);
         return view('post.index', compact('posts'));

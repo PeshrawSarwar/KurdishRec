@@ -119,9 +119,7 @@
                                         edit
                                     </a>
                                 @else
-                                    <button class="btn btn-success" disabled>
-                                        <i class="fa fa-edit"></i> edit
-                                    </button>
+
                                 @endif
                                 {{-- Check Have Permission Delete post--}}
                                 @if (Auth::user())
@@ -130,9 +128,7 @@
                                         delete
                                     </a>
                                 @else
-                                    <button class="btn btn-danger" disabled>
-                                        <i class="fas fa-trash"></i> delete
-                                    </button>
+
                                 @endif
                                 </a>
                             </div>
