@@ -6,15 +6,41 @@
 
         <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
-         <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+
+    <script src="https://www.themehorse.com/preview/newscard/wp-content/themes/newscard/assets/library/sticky/jquery.sticky.js?ver=1.0.4"></script>
+
+    <script src="https://www.themehorse.com/preview/newscard/wp-content/themes/newscard/assets/library/sticky/jquery.sticky-settings.js?ver=5.5.1"></script>
+    {{--  --}}
+
+    <link rel="stylesheet" href="{{ asset('front-end/css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/classy-nav.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/themify-icons.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('front-end/bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/css/css1/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('front-end/js/css/customize-controls.css') }}">
+
+     <link rel="stylesheet" href="{{ asset('front-end/js/library/font-awesome/css/font-awesome.css') }}">
+     <link rel="stylesheet" href="{{ asset('front-end/js/library/owl-carousel/owl.carousel.css') }}">
+     <link rel="stylesheet" href="{{ asset('front-end/js/library/owl-carousel/owl.carousel.min.css') }}">
+
+    {{--  --}}
+
     </head>
-    <body>
+
+    <body class="me page-template page-template-templates page-template-front-page-template page-template-templatesfront-page-template-php page page-id-5 theme-body">
        <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        {{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -43,16 +69,42 @@
               </ul>
 
             </div>
-          </nav>
+          </nav> --}}
 
-          <div class="row justify-content-center">
-            <div class="col-md-12">
-               @yield('content')
-            </div>
+          <div class="container">
+
+                @yield('content')
+
           </div>
 
 
 
+
+
        </div>
+
+
+
+       <script src="https://kit.fontawesome.com/8458af41f8.js" crossorigin="anonymous"></script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.2.2/web-animations.min.js"></script>
+      <script src="{{ asset('front-end/js/bootstrap/popper.min.js') }}"></script>
+      <script src="{{ asset('front-end/js/plugins/plugins.js') }}"></script>
+      <script src="{{ asset('front-end/js/active.js') }}"></script>
+      <script src="{{ asset('front-end/bootstrap/js/bootstrap.js') }}"></script>
+      <script src="{{ asset('front-end/bootstrap/js/bootstrap.min.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/jquery.marquee/jquery.marquee.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/jquery.marquee/jquery.marquee.min.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/jquery.marquee/jquery.marquee-settings.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/owl-carousel/owl.carousel.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/owl-carousel/owl.carousel.min.js') }}"></script>
+      <script src="{{ asset('front-end/js/library/owl-carousel/owl.carousel-settings.js') }}"></script>
+      <script src="{{ asset('front-end/js/js/html5.js') }}"></script>
+      <script src="{{ asset('front-end/js/js/scripts.js') }}"></script>
+      <script src="{{ asset('front-end/js/js/skip-link-focus-fix.js') }}"></script>
+      <script src="{{ asset('front-end/js/js/customizer.js') }}"></script>
+      <script src="{{ asset('front-end/js/js/customizer-control.js') }}"></script>
     </body>
 </html>

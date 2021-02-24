@@ -1,0 +1,55 @@
+.top-web{
+    height: 150px;
+
+}
+.mynav{
+
+    width: 90%;
+    bottom: 0;
+}
+
+
+.slider-show{
+    height: 400px;
+}
+.slider-btn-prev,.slider-btn-next{
+    height: 70px;
+    width: 5%;
+    top: 45%;
+
+}
+.carousel-control-prev,.carousel-control-next{
+    color: brown;
+}
+.carousel-inner img{
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    margin: 5%;
+
+
+}
+.silder_text{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.img-hover{
+
+    opacity: 1;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.img-hover:hover{
+    opacity: 0.9;
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+.bg-columns{
+    background-color: lavender;
+    margin: 1%;
+    border-radius:10% ;
+}
