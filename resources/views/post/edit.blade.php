@@ -41,6 +41,31 @@
                 @enderror
             </div>
 
+            <div class="form-group clearfix">
+                @foreach ($categories as $category)
+                      <div class="icheck-primary d-inline">
+                        <input
+                            type="checkbox"
+                            name="categories[]"
+                            id="{{$category->name}}"
+                            value="{{$category->id}}"
+                            @foreach ($post->category as $postcat)
+                                {{$postcat->id == $category->id ? 'checked' : '' }}
+                            @endforeach>
+                        <label for="{{$category->name}}">
+                            {{$category->name}}
+                        </label>
+                      </div>
+                @endforeach
+            </div>
+          </div>
+            @error('categories')
+                <span class="error invalid-feedback" style="font-size: 17px;font-weight: 600; display: block;">
+                    {{ $message }}
+                </span>
+            @enderror
+        </div>
+
 
 
 
