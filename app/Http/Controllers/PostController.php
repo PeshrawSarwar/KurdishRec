@@ -25,7 +25,7 @@ class PostController extends Controller
     }
 
     public function index(){
-        $posts = Post::with('category:id,name')->latest()->paginate(10);
+        $posts = Post::with('category:id,name')->latest()->paginate(9);
         return view('post.index', compact('posts'));
     }
 
@@ -49,13 +49,13 @@ class PostController extends Controller
 
             // Check If File images is Exists Or No
             if (Arr::has($directories, 'images') === false) {
-                // If File images is Not Exists Make A New One
+
                 $createDirectory = Storage::makeDirectory('public/images');
-                // Get All Directory In Storge/public/images
+
                 $directory = Storage::directories('public/images');
-                // Check If File post is Exists Or No
+
                 if (Arr::has($directory, 'post') === false) {
-                    // If File post is Not Exists Make A New One
+
                     $createDirectory = Storage::makeDirectory('public/images/post');
 
                     // Add New Image
@@ -69,15 +69,15 @@ class PostController extends Controller
 
                     $photo->image = $fakeName;
                     $photo->save();
-                    // Make Sync Between Post & Image
+
                     $post->photo()->sync($photo);
 
-                } // End Of If Check File post is Exists Or No
+                }
 
-            } // End Of If Check File images is Exists Or No
+            }
 
         } else {
-            // Choose Image From
+
             $post->photo()->sync($request->imgs);
 
         }

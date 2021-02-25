@@ -11,7 +11,7 @@
             <div class="col-lg-12 col-xl-12">
                 <div class="featured-slider post-slider">
                     <div class="post-slider-header">
-                        <h3 class="stories-title">Main Section</h3>
+                        <h3 class="stories-title">New Recomendations</h3>
                     </div>
                     <div class="owl-carousel">
                         @foreach($posts as $post)
