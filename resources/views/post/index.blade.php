@@ -83,105 +83,68 @@
         </div>
     </div>
 </section>
-
-<div class="container">
-    <section id="newscard_card_block_posts-4" class="widget newscard-widget-card-block-posts">
-        <div class="row gutter-parent-14">
-            @foreach($posts  as $post)
-
-            <div class="col-sm-6 post-col">
-                <div class="post-item post-boxed">
-                    <div class="post-img-wrap">
-                        @foreach ($post->photo as $img)
-                        <a href="" class="post-img" style="background-image: url({{asset(Storage::url('images/post/' . $img->image)) }});');"></a>
-                        @endforeach
-                        <div class="entry-meta category-meta">
-                            <div class="cat-links">
-                                @foreach($post->category->take(3) as $category)
-                                                    <a href="">
-                                                        {{ $category->name }}
-                                                    @endforeach
-                                                    </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="post-content">
-                        <h3 class="entry-title"><a href="">
-                            {{ $post->title }}
-                        </a></h3>
-                        <div class="entry-meta">
-                            <div class="date"><a href="">{{ $post->created_at->since() }}</a></div>
-                            <div class="by-author vcard author">
-                                <a href="">
-                                    @if (Auth::user())
-                                    <a href="{{Route('post.edit', ['id'=>$post->id])}}" class="btn btn-success">
-                                        <i class="fa fa-edit"></i>
-                                        edit
-                                    </a>
-                                @else
-
-                                @endif
-                                {{-- Check Have Permission Delete post--}}
-                                @if (Auth::user())
-                                    <a href="{{Route('post.delete', ['id'=>$post->id])}}" class="btn btn-danger">
-                                        <i class="fas fa-trash"></i>
-                                        delete
-                                    </a>
-                                @else
-
-                                @endif
-                                </a>
-                            </div>
-                        </div>
-                        <div class="entry-content">
-                            <p>{!!  substr(strip_tags($post->content), 0, 300) !!} ...</p>
+<section id="gallery">
+    <div class="container bg-light">
+      <div class="row">
+         @foreach($posts  as $post)
+         <div class="col-lg-4 mb-4">
+            <div class="card shadow ">
+            <div class="post-img-wrap">
+                    @foreach ($post->photo as $img)
+                    <a href="" class="post-img" style="background-image: url({{asset(Storage::url('images/post/' . $img->image)) }});');"></a>
+                    @endforeach
+                    <div class="entry-meta category-meta">
+                        <div class="cat-links">
+                            @foreach($post->category->take(3) as $category)
+                                                <a href="">
+                                                    {{ $category->name }}
+                                                @endforeach
+                                                </a>
                         </div>
                     </div>
                 </div>
-            </div>
+        <div class="card-body">
+                    <h3 class="entry-title"><a href="">
+                        {{ $post->title }}
+                    </a></h3>
 
-            @endforeach
-
-
-        </div>
-    </section>
-</div>
-
-{{--  --}}
-{{-- <div class="d-flex flex-row bd-highlight mb-3 flex-wrap"> --}}
-    {{-- @foreach ($posts as $post)
-
-            <div class="col col-4 p-2 bd-highlight">
-
-                <div class="card" style="width: 18rem;">
-                    @foreach ($post->photo as $img)
-                    <img src="{{ asset(Storage::url('images/post/' . $img->image)) }}" alt="" class="card-img-top">
-                @endforeach
-                    <div class="card-body">
-                      <h5 class="card-title">{{ $post -> title }}</h5>
-                      <p class="card-text">{{ $post->content }}</p>
-                      @if (Auth::user())
-                    <a href="{{Route('post.edit', ['id'=>$post->id])}}" class="btn btn-success">
-                        <i class="fa fa-edit"></i>
-                        edit
-                    </a>
-
-                @endif
-
-                @if (Auth::user())
-                    <a href="{{Route('post.delete', ['id'=>$post->id])}}"" class="btn btn-danger">
-                        <i class="fas fa-trash"></i>
-                        delete
-                    </a>
-
-                @endif
+                    <div class="entry-content">
+                        <p>{!!  substr(strip_tags($post->content), 0, 300) !!} ...</p>
                     </div>
-                  </div>
+          <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+          <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                <div class="date"><a href="">{{ $post->created_at->since() }}</a></div>
+                <div class="by-author vcard author">
+                            <a href="">
+                                @if (Auth::user())
+                                <a href="{{Route('post.edit', ['id'=>$post->id])}}" class="btn btn-success">
+                                    <i class="fa fa-edit"></i>
+                                    edit
+                                </a>
+                            @else
 
-            </div>
+                            @endif
+                            {{-- Check Have Permission Delete post--}}
+                            @if (Auth::user())
+                                <a href="{{Route('post.delete', ['id'=>$post->id])}}" class="btn btn-danger">
+                                    <i class="fas fa-trash"></i>
+                                    delete
+                                </a>
+                            @else
 
+                            @endif
+                            </a>
+                        </div>
+        </div>
+       </div>
+      </div>
 
-    @endforeach --}}
+      @endforeach
+    </div>
+  </div>
+  </section>
+{{--  --}}
+
         </div>
         {{ $posts->links() }}
 @endsection
