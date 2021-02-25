@@ -2,35 +2,7 @@
 @section('content')
 {{--  --}}
 
-{{-- <div class="top-stories-bar" >
-    <div class="container">
-        <div class="row top-stories-box clearfix">
-            <div class="col-sm-auto">
-                <div class="top-stories-label">
-                    <div class="top-stories-label-wrap">
-                        <span class="flash-icon"></span>
-                        <span class="label-txt">
-                            Top Stories
-                        </span>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-12 col-sm top-stories-lists">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <div class="marquee">
-                            @foreach ($posts as $post)
-                                   <a href="">{{ $post->title }}</a>
-                            @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 
 <section class="featured-section">
