@@ -10,6 +10,9 @@ Also is had, admins when you register then you can edit and delete any posts you
 
 This website created by Laravel framework and MySql Database.
 It aconsists of 4 main tables (Users-Posts-Photos-Categories) and 2 tables for relationship between main tables (category_post, photo_post)
+
+P.s:
+email and passowrd: peshrawhasan@outlook.com/abcd1234
  
 The Main Page:
 
