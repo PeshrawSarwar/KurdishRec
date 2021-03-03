@@ -1,3 +1,10 @@
+Created By:
+Miran Ali
+Hawshad Hawre
+Solin Farhad 
+Peshraw Sarwar
+
+
 #################################
      Kurdish Recomendation
 #################################
